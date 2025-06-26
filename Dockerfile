@@ -1,4 +1,4 @@
-ARG BUILD_FROM=registry.access.redhat.com/ubi8/python-311
+ARG BUILD_FROM=registry.access.redhat.com/ubi9/python-311
 FROM $BUILD_FROM
 
 USER root
