@@ -13,8 +13,7 @@ WORKDIR /app
 # Only whitelisted files, see: .dockerignore
 COPY . /app/
 
-RUN pip install -U pip && \
-    pip install --no-cache-dir -r /app/requirements.txt && \
+RUN pip install --no-cache-dir --require-hashes -r /app/requirements.txt && \
     uwsgi --build-plugin /app/escape_json.c
 
 USER default
